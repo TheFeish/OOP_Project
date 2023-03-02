@@ -15,7 +15,7 @@ struct studentas {
     }
 };
 
-studentas atsitiktinisStudentas(studentas& stud);
+void atsitiktinisStudentas(studentas& stud);
 void pridetiPazymius(studentas& stud);
 void pridetiStudenta(vector<studentas>& mas);
 double vidurkis(vector<int> mas);
@@ -47,7 +47,7 @@ int main()
     return 0;
 }
 
-studentas atsitiktinisStudentas(studentas& stud) {
+void atsitiktinisStudentas(studentas& stud) {
 
     random_device rd;
     mt19937 mt(rd());
@@ -71,8 +71,6 @@ studentas atsitiktinisStudentas(studentas& stud) {
     stud.vidurkis = vidurkis(mas);
     stud.mediana = mediana(mas);
     stud.egzaminas = distPazymiai(mt);
-
-    return stud;
 }
 
 void pridetiPazymius(studentas& stud) {
